@@ -1,8 +1,6 @@
 FROM DOCKER/dockerfile.cpp
 WORKDIR /app
-COPY cpp dockerfile
-RUN dockerfile
-RUN npm install
-COPY ..
+COPY cpp dockerfile.cpp
+RUN dockerfile.cpp
 EXPOSE 80
-CMD ["dockerfile", "start"]
+CMD ["dockerfile,cpp", "start"]
